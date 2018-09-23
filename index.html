@@ -10,11 +10,26 @@
         .chart-container {
             max-width: 600px;
             margin: 0 auto;
+            text-align: center;
         }
 
-        .chart-container>canvas {
-            margin: 16px 0;
-            border: 1px solid #eee;
+        #secondary-chars-container {
+            text-align: center;
+        }
+
+        .arc text {
+            font: 14px sans-serif;
+            text-anchor: middle;
+            fill: #fff;
+        }
+
+        .arc path {
+            stroke: #fff;
+        }
+
+        .chart-title {
+            font: 20px sans-serif;
+            fill: #000;
         }
     </style>
 </head>
@@ -22,10 +37,11 @@
 <body>
     <h1>Hello there! Fancy Chart below!</h1>
     <div class="chart-container">
-        <canvas id="main-chart" width="400" height="400"></canvas>
+        <svg id="main-d3-chart" width="400" height="500"></svg>
     </div>
     <div id="secondary-charts-container" class="chart-container"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0"></script>
     <script src="./index.js"></script>
 </body>
